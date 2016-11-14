@@ -1,0 +1,437 @@
+ARM Linker, 5.03 [Build 76] [MDK-ARM Lite]
+
+==============================================================================
+
+Section Cross References
+
+    maingame.o(.text) refers to maingame.o(.constdata) for ASCII
+    maingame.o(.text) refers to maingame.o(.bss) for Screen
+    maingame.o(.text) refers to maingame.o(.data) for frames
+    maingame.o(.text) refers to random.o(.text) for Random
+    maingame.o(.text) refers to startup.o(.text) for DisableInterrupts
+    startup.o(RESET) refers to startup.o(STACK) for StackMem
+    startup.o(RESET) refers to maingame.o(.text) for SysTick_Handler
+    startup.o(RESET) refers to entry.o(.ARM.Collect$$$$00000000) for __main
+    random.o(.text) refers to random.o(DATA) for M
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry10a.o(.ARM.Collect$$$$0000000D) for __rt_final_cpp
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry11a.o(.ARM.Collect$$$$0000000F) for __rt_final_exit
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry7b.o(.ARM.Collect$$$$00000008) for _main_clock
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry8b.o(.ARM.Collect$$$$0000000A) for _main_cpp_init
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry9a.o(.ARM.Collect$$$$0000000B) for _main_init
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry5.o(.ARM.Collect$$$$00000004) for _main_scatterload
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry2.o(.ARM.Collect$$$$00000001) for _main_stk
+    entry2.o(.ARM.Collect$$$$00000001) refers to entry2.o(.ARM.Collect$$$$00002712) for __lit__00000000
+    entry2.o(.ARM.Collect$$$$00002712) refers to startup.o(STACK) for __initial_sp
+    entry2.o(__vectab_stack_and_reset_area) refers to startup.o(STACK) for __initial_sp
+    entry2.o(__vectab_stack_and_reset_area) refers to entry.o(.ARM.Collect$$$$00000000) for __main
+    entry5.o(.ARM.Collect$$$$00000004) refers to init.o(.text) for __scatterload
+    entry9a.o(.ARM.Collect$$$$0000000B) refers to maingame.o(.text) for main
+    entry9b.o(.ARM.Collect$$$$0000000C) refers to maingame.o(.text) for main
+    init.o(.text) refers to entry5.o(.ARM.Collect$$$$00000004) for __main_after_scatterload
+
+
+==============================================================================
+
+Removing Unused input sections from the image.
+
+    Removing startup.o(HEAP), (0 bytes).
+
+1 unused section(s) (total 0 bytes) removed from the image.
+
+==============================================================================
+
+Image Symbol Table
+
+    Local Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    RESET                                    0x00000000   Section      644  startup.o(RESET)
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry5.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry2.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11a.o ABSOLUTE
+    dc.s                                     0x00000000   Number         0  dc.o ABSOLUTE
+    handlers.s                               0x00000000   Number         0  handlers.o ABSOLUTE
+    init.s                                   0x00000000   Number         0  init.o ABSOLUTE
+    maingame.c                               0x00000000   Number         0  maingame.o ABSOLUTE
+    random.s                                 0x00000000   Number         0  random.o ABSOLUTE
+    startup.s                                0x00000000   Number         0  startup.o ABSOLUTE
+    $v0                                      0x0000026c   Number         0  startup.o(RESET)
+    .ARM.Collect$$$$00000000                 0x00000284   Section        0  entry.o(.ARM.Collect$$$$00000000)
+    .ARM.Collect$$$$00000001                 0x00000284   Section        4  entry2.o(.ARM.Collect$$$$00000001)
+    .ARM.Collect$$$$00000004                 0x00000288   Section        4  entry5.o(.ARM.Collect$$$$00000004)
+    .ARM.Collect$$$$00000008                 0x0000028c   Section        0  entry7b.o(.ARM.Collect$$$$00000008)
+    .ARM.Collect$$$$0000000A                 0x0000028c   Section        0  entry8b.o(.ARM.Collect$$$$0000000A)
+    .ARM.Collect$$$$0000000B                 0x0000028c   Section        8  entry9a.o(.ARM.Collect$$$$0000000B)
+    .ARM.Collect$$$$0000000D                 0x00000294   Section        0  entry10a.o(.ARM.Collect$$$$0000000D)
+    .ARM.Collect$$$$0000000F                 0x00000294   Section        0  entry11a.o(.ARM.Collect$$$$0000000F)
+    .ARM.Collect$$$$00002712                 0x00000294   Section        4  entry2.o(.ARM.Collect$$$$00002712)
+    __lit__00000000                          0x00000294   Data           4  entry2.o(.ARM.Collect$$$$00002712)
+    .text                                    0x00000298   Section        0  maingame.o(.text)
+    lcdwrite                                 0x00000299   Thumb Code    66  maingame.o(.text)
+    .text                                    0x00001bf8   Section       28  startup.o(.text)
+    $v0                                      0x00001bf8   Number         0  startup.o(.text)
+    .text                                    0x00001c14   Section       40  random.o(.text)
+    $v0                                      0x00001c14   Number         0  random.o(.text)
+    .text                                    0x00001c3c   Section       36  init.o(.text)
+    i.__scatterload_copy                     0x00001c60   Section       14  handlers.o(i.__scatterload_copy)
+    i.__scatterload_null                     0x00001c6e   Section        2  handlers.o(i.__scatterload_null)
+    i.__scatterload_zeroinit                 0x00001c70   Section       14  handlers.o(i.__scatterload_zeroinit)
+    .constdata                               0x00001c7e   Section     4411  maingame.o(.constdata)
+    ASCII                                    0x00001c7e   Data         480  maingame.o(.constdata)
+    .data                                    0x20000000   Section       12  maingame.o(.data)
+    DATA                                     0x2000000c   Section        4  random.o(DATA)
+    M                                        0x2000000c   Data           4  random.o(DATA)
+    .bss                                     0x20000010   Section      768  maingame.o(.bss)
+    STACK                                    0x20000310   Section     1024  startup.o(STACK)
+    StackMem                                 0x20000310   Data           0  startup.o(STACK)
+
+    Global Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    BuildAttributes$$THM_ISAv4$E$P$D$K$B$S$7EM$VFPi3$EXTD16$VFPS$VFMA$PE$A:L22UL41UL21$X:L11$S22US41US21$IEEE1$IW$USESV6$~STKCKD$USESV7$~SHL$OSPACE$EBA8$MICROLIB$REQ8$PRES8$EABIv2 0x00000000   Number         0  anon$$obj.o ABSOLUTE
+    __ARM_use_no_argv                        0x00000000   Number         0  maingame.o ABSOLUTE
+    __Vectors                                0x00000000   Data           0  startup.o(RESET)
+    __cpp_initialize__aeabi_                  - Undefined Weak Reference
+    __cxa_finalize                            - Undefined Weak Reference
+    __decompress                              - Undefined Weak Reference
+    _clock_init                               - Undefined Weak Reference
+    _microlib_exit                            - Undefined Weak Reference
+    Reset_Handler                            0x0000026d   Thumb Code     0  startup.o(RESET)
+    NMI_Handler                              0x00000271   Thumb Code     2  startup.o(RESET)
+    HardFault_Handler                        0x00000273   Thumb Code     2  startup.o(RESET)
+    MemManage_Handler                        0x00000275   Thumb Code     2  startup.o(RESET)
+    BusFault_Handler                         0x00000277   Thumb Code     2  startup.o(RESET)
+    UsageFault_Handler                       0x00000279   Thumb Code     2  startup.o(RESET)
+    SVC_Handler                              0x0000027b   Thumb Code     2  startup.o(RESET)
+    DebugMon_Handler                         0x0000027d   Thumb Code     2  startup.o(RESET)
+    PendSV_Handler                           0x0000027f   Thumb Code     2  startup.o(RESET)
+    ADC0Seq0_Handler                         0x00000283   Thumb Code     0  startup.o(RESET)
+    ADC0Seq1_Handler                         0x00000283   Thumb Code     0  startup.o(RESET)
+    ADC0Seq2_Handler                         0x00000283   Thumb Code     0  startup.o(RESET)
+    ADC0Seq3_Handler                         0x00000283   Thumb Code     0  startup.o(RESET)
+    ADC1Seq0_Handler                         0x00000283   Thumb Code     0  startup.o(RESET)
+    ADC1Seq1_Handler                         0x00000283   Thumb Code     0  startup.o(RESET)
+    ADC1Seq2_Handler                         0x00000283   Thumb Code     0  startup.o(RESET)
+    ADC1Seq3_Handler                         0x00000283   Thumb Code     0  startup.o(RESET)
+    CAN0_Handler                             0x00000283   Thumb Code     0  startup.o(RESET)
+    CAN1_Handler                             0x00000283   Thumb Code     0  startup.o(RESET)
+    CAN2_Handler                             0x00000283   Thumb Code     0  startup.o(RESET)
+    Comp0_Handler                            0x00000283   Thumb Code     0  startup.o(RESET)
+    Comp1_Handler                            0x00000283   Thumb Code     0  startup.o(RESET)
+    Comp2_Handler                            0x00000283   Thumb Code     0  startup.o(RESET)
+    Ethernet_Handler                         0x00000283   Thumb Code     0  startup.o(RESET)
+    ExtBus_Handler                           0x00000283   Thumb Code     0  startup.o(RESET)
+    FPU_Handler                              0x00000283   Thumb Code     0  startup.o(RESET)
+    Fan0_Handler                             0x00000283   Thumb Code     0  startup.o(RESET)
+    FlashCtl_Handler                         0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortA_Handler                        0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortB_Handler                        0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortC_Handler                        0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortD_Handler                        0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortE_Handler                        0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortF_Handler                        0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortG_Handler                        0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortH_Handler                        0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortJ_Handler                        0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortK_Handler                        0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortL_Handler                        0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortM_Handler                        0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortN_Handler                        0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortP1_Handler                       0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortP2_Handler                       0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortP3_Handler                       0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortP4_Handler                       0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortP5_Handler                       0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortP6_Handler                       0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortP7_Handler                       0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortP_Handler                        0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortQ1_Handler                       0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortQ2_Handler                       0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortQ3_Handler                       0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortQ4_Handler                       0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortQ5_Handler                       0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortQ6_Handler                       0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortQ7_Handler                       0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortQ_Handler                        0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortR_Handler                        0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortS_Handler                        0x00000283   Thumb Code     0  startup.o(RESET)
+    Hibernate_Handler                        0x00000283   Thumb Code     0  startup.o(RESET)
+    I2C0_Handler                             0x00000283   Thumb Code     0  startup.o(RESET)
+    I2C1_Handler                             0x00000283   Thumb Code     0  startup.o(RESET)
+    I2C2_Handler                             0x00000283   Thumb Code     0  startup.o(RESET)
+    I2C3_Handler                             0x00000283   Thumb Code     0  startup.o(RESET)
+    I2C4_Handler                             0x00000283   Thumb Code     0  startup.o(RESET)
+    I2C5_Handler                             0x00000283   Thumb Code     0  startup.o(RESET)
+    I2S0_Handler                             0x00000283   Thumb Code     0  startup.o(RESET)
+    LPC0_Handler                             0x00000283   Thumb Code     0  startup.o(RESET)
+    PECI0_Handler                            0x00000283   Thumb Code     0  startup.o(RESET)
+    PWM0Fault_Handler                        0x00000283   Thumb Code     0  startup.o(RESET)
+    PWM0Generator0_Handler                   0x00000283   Thumb Code     0  startup.o(RESET)
+    PWM0Generator1_Handler                   0x00000283   Thumb Code     0  startup.o(RESET)
+    PWM0Generator2_Handler                   0x00000283   Thumb Code     0  startup.o(RESET)
+    PWM0Generator3_Handler                   0x00000283   Thumb Code     0  startup.o(RESET)
+    PWM1Fault_Handler                        0x00000283   Thumb Code     0  startup.o(RESET)
+    PWM1Generator0_Handler                   0x00000283   Thumb Code     0  startup.o(RESET)
+    PWM1Generator1_Handler                   0x00000283   Thumb Code     0  startup.o(RESET)
+    PWM1Generator2_Handler                   0x00000283   Thumb Code     0  startup.o(RESET)
+    PWM1Generator3_Handler                   0x00000283   Thumb Code     0  startup.o(RESET)
+    Quadrature0_Handler                      0x00000283   Thumb Code     0  startup.o(RESET)
+    Quadrature1_Handler                      0x00000283   Thumb Code     0  startup.o(RESET)
+    Quadrature2_Handler                      0x00000283   Thumb Code     0  startup.o(RESET)
+    SSI0_Handler                             0x00000283   Thumb Code     0  startup.o(RESET)
+    SSI1_Handler                             0x00000283   Thumb Code     0  startup.o(RESET)
+    SSI2_Handler                             0x00000283   Thumb Code     0  startup.o(RESET)
+    SSI3_Handler                             0x00000283   Thumb Code     0  startup.o(RESET)
+    SysCtl_Handler                           0x00000283   Thumb Code     0  startup.o(RESET)
+    Timer0A_Handler                          0x00000283   Thumb Code     0  startup.o(RESET)
+    Timer0B_Handler                          0x00000283   Thumb Code     0  startup.o(RESET)
+    Timer1A_Handler                          0x00000283   Thumb Code     0  startup.o(RESET)
+    Timer1B_Handler                          0x00000283   Thumb Code     0  startup.o(RESET)
+    Timer2A_Handler                          0x00000283   Thumb Code     0  startup.o(RESET)
+    Timer2B_Handler                          0x00000283   Thumb Code     0  startup.o(RESET)
+    Timer3A_Handler                          0x00000283   Thumb Code     0  startup.o(RESET)
+    Timer3B_Handler                          0x00000283   Thumb Code     0  startup.o(RESET)
+    Timer4A_Handler                          0x00000283   Thumb Code     0  startup.o(RESET)
+    Timer4B_Handler                          0x00000283   Thumb Code     0  startup.o(RESET)
+    Timer5A_Handler                          0x00000283   Thumb Code     0  startup.o(RESET)
+    Timer5B_Handler                          0x00000283   Thumb Code     0  startup.o(RESET)
+    UART0_Handler                            0x00000283   Thumb Code     0  startup.o(RESET)
+    UART1_Handler                            0x00000283   Thumb Code     0  startup.o(RESET)
+    UART2_Handler                            0x00000283   Thumb Code     0  startup.o(RESET)
+    UART3_Handler                            0x00000283   Thumb Code     0  startup.o(RESET)
+    UART4_Handler                            0x00000283   Thumb Code     0  startup.o(RESET)
+    UART5_Handler                            0x00000283   Thumb Code     0  startup.o(RESET)
+    UART6_Handler                            0x00000283   Thumb Code     0  startup.o(RESET)
+    UART7_Handler                            0x00000283   Thumb Code     0  startup.o(RESET)
+    USB0_Handler                             0x00000283   Thumb Code     0  startup.o(RESET)
+    WDT_Handler                              0x00000283   Thumb Code     0  startup.o(RESET)
+    WideTimer0A_Handler                      0x00000283   Thumb Code     0  startup.o(RESET)
+    WideTimer0B_Handler                      0x00000283   Thumb Code     0  startup.o(RESET)
+    WideTimer1A_Handler                      0x00000283   Thumb Code     0  startup.o(RESET)
+    WideTimer1B_Handler                      0x00000283   Thumb Code     0  startup.o(RESET)
+    WideTimer2A_Handler                      0x00000283   Thumb Code     0  startup.o(RESET)
+    WideTimer2B_Handler                      0x00000283   Thumb Code     0  startup.o(RESET)
+    WideTimer3A_Handler                      0x00000283   Thumb Code     0  startup.o(RESET)
+    WideTimer3B_Handler                      0x00000283   Thumb Code     0  startup.o(RESET)
+    WideTimer4A_Handler                      0x00000283   Thumb Code     0  startup.o(RESET)
+    WideTimer4B_Handler                      0x00000283   Thumb Code     0  startup.o(RESET)
+    WideTimer5A_Handler                      0x00000283   Thumb Code     0  startup.o(RESET)
+    WideTimer5B_Handler                      0x00000283   Thumb Code     0  startup.o(RESET)
+    uDMA_Error                               0x00000283   Thumb Code     0  startup.o(RESET)
+    uDMA_Handler                             0x00000283   Thumb Code     0  startup.o(RESET)
+    __main                                   0x00000285   Thumb Code     0  entry.o(.ARM.Collect$$$$00000000)
+    _main_stk                                0x00000285   Thumb Code     0  entry2.o(.ARM.Collect$$$$00000001)
+    _main_scatterload                        0x00000289   Thumb Code     0  entry5.o(.ARM.Collect$$$$00000004)
+    __main_after_scatterload                 0x0000028d   Thumb Code     0  entry5.o(.ARM.Collect$$$$00000004)
+    _main_clock                              0x0000028d   Thumb Code     0  entry7b.o(.ARM.Collect$$$$00000008)
+    _main_cpp_init                           0x0000028d   Thumb Code     0  entry8b.o(.ARM.Collect$$$$0000000A)
+    _main_init                               0x0000028d   Thumb Code     0  entry9a.o(.ARM.Collect$$$$0000000B)
+    __rt_final_cpp                           0x00000295   Thumb Code     0  entry10a.o(.ARM.Collect$$$$0000000D)
+    __rt_final_exit                          0x00000295   Thumb Code     0  entry11a.o(.ARM.Collect$$$$0000000F)
+    Nokia5110_Init                           0x000002db   Thumb Code   316  maingame.o(.text)
+    Nokia5110_OutChar                        0x00000417   Thumb Code    52  maingame.o(.text)
+    Nokia5110_OutString                      0x0000044b   Thumb Code    22  maingame.o(.text)
+    Nokia5110_OutUDec                        0x00000461   Thumb Code   394  maingame.o(.text)
+    Nokia5110_SetCursor                      0x000005eb   Thumb Code    48  maingame.o(.text)
+    Nokia5110_Clear                          0x0000061b   Thumb Code    32  maingame.o(.text)
+    Nokia5110_DrawFullImage                  0x0000063b   Thumb Code    34  maingame.o(.text)
+    Nokia5110_PrintBMP                       0x0000065d   Thumb Code   494  maingame.o(.text)
+    Nokia5110_ClearBuffer                    0x0000084b   Thumb Code    20  maingame.o(.text)
+    Nokia5110_DisplayBuffer                  0x0000085f   Thumb Code    10  maingame.o(.text)
+    PLL_Init                                 0x00000869   Thumb Code   132  maingame.o(.text)
+    Timer2_Init                              0x000008ed   Thumb Code    80  maingame.o(.text)
+    EdgeInterupt_Init                        0x0000093d   Thumb Code   210  maingame.o(.text)
+    SysTick_Init                             0x00000a0f   Thumb Code    42  maingame.o(.text)
+    ADC0_Init                                0x00000a39   Thumb Code   178  maingame.o(.text)
+    GameInit                                 0x00000aeb   Thumb Code   662  maingame.o(.text)
+    ADC0_In                                  0x00000d81   Thumb Code    36  maingame.o(.text)
+    mov_ships                                0x00000da5   Thumb Code   676  maingame.o(.text)
+    mov_bullets                              0x00001049   Thumb Code   318  maingame.o(.text)
+    EBul_interact                            0x00001187   Thumb Code   488  maingame.o(.text)
+    PBul_interact                            0x0000136f   Thumb Code   640  maingame.o(.text)
+    SysTick_Handler                          0x000015ef   Thumb Code   356  maingame.o(.text)
+    generateEbullets                         0x00001753   Thumb Code   362  maingame.o(.text)
+    IntroScreen                              0x000018bd   Thumb Code    32  maingame.o(.text)
+    EndScreen                                0x000018dd   Thumb Code    76  maingame.o(.text)
+    EnterBufferData                          0x00001929   Thumb Code   472  maingame.o(.text)
+    main                                     0x00001b01   Thumb Code   208  maingame.o(.text)
+    DisableInterrupts                        0x00001bf9   Thumb Code     0  startup.o(.text)
+    EnableInterrupts                         0x00001bfd   Thumb Code     0  startup.o(.text)
+    StartCritical                            0x00001c01   Thumb Code     0  startup.o(.text)
+    EndCritical                              0x00001c09   Thumb Code     0  startup.o(.text)
+    WaitForInterrupt                         0x00001c0f   Thumb Code     0  startup.o(.text)
+    Random_Init                              0x00001c15   Thumb Code     0  random.o(.text)
+    Random                                   0x00001c1f   Thumb Code     2  random.o(.text)
+    __scatterload                            0x00001c3d   Thumb Code    28  init.o(.text)
+    __scatterload_rt2                        0x00001c3d   Thumb Code     0  init.o(.text)
+    __scatterload_copy                       0x00001c61   Thumb Code    14  handlers.o(i.__scatterload_copy)
+    __scatterload_null                       0x00001c6f   Thumb Code     2  handlers.o(i.__scatterload_null)
+    __scatterload_zeroinit                   0x00001c71   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
+    SmallEnemy30PointA                       0x00001e5e   Data         199  maingame.o(.constdata)
+    SmallEnemy30PointB                       0x00001f25   Data         199  maingame.o(.constdata)
+    SmallEnemy20PointA                       0x00001fec   Data         199  maingame.o(.constdata)
+    SmallEnemy20PointB                       0x000020b3   Data         199  maingame.o(.constdata)
+    SmallEnemy10PointA                       0x0000217a   Data         199  maingame.o(.constdata)
+    SmallEnemy10PointB                       0x00002241   Data         199  maingame.o(.constdata)
+    PlayerShip0                              0x00002308   Data         215  maingame.o(.constdata)
+    SmallEnemyBonus0                         0x000023df   Data         203  maingame.o(.constdata)
+    Bunker0                                  0x000024aa   Data         179  maingame.o(.constdata)
+    Bunker1                                  0x0000255d   Data         179  maingame.o(.constdata)
+    Bunker2                                  0x00002610   Data         179  maingame.o(.constdata)
+    Bunker3                                  0x000026c3   Data         179  maingame.o(.constdata)
+    BigExplosion0                            0x00002776   Data         215  maingame.o(.constdata)
+    BigExplosion1                            0x0000284d   Data         215  maingame.o(.constdata)
+    SmallExplosion0                          0x00002924   Data         199  maingame.o(.constdata)
+    SmallExplosion1                          0x000029eb   Data         199  maingame.o(.constdata)
+    Missile0                                 0x00002ab2   Data         155  maingame.o(.constdata)
+    Missile1                                 0x00002b4d   Data         155  maingame.o(.constdata)
+    Missile2                                 0x00002be8   Data         155  maingame.o(.constdata)
+    Laser0                                   0x00002c83   Data         155  maingame.o(.constdata)
+    Laser1                                   0x00002d1e   Data         155  maingame.o(.constdata)
+    Region$$Table$$Base                      0x00002dbc   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x00002ddc   Number         0  anon$$obj.o(Region$$Table)
+    efirechance                              0x20000000   Data           2  maingame.o(.data)
+    num_ebullets                             0x20000002   Data           2  maingame.o(.data)
+    num_pbullets                             0x20000004   Data           2  maingame.o(.data)
+    displayflag                              0x20000006   Data           1  maingame.o(.data)
+    gamestartflag                            0x20000007   Data           1  maingame.o(.data)
+    eshipsleft                               0x20000008   Data           1  maingame.o(.data)
+    frames                                   0x20000009   Data           1  maingame.o(.data)
+    soundflag                                0x2000000a   Data           1  maingame.o(.data)
+    fireflag                                 0x2000000b   Data           1  maingame.o(.data)
+    Screen                                   0x20000010   Data         504  maingame.o(.bss)
+    player                                   0x20000208   Data          12  maingame.o(.bss)
+    eshipsu                                  0x20000214   Data          48  maingame.o(.bss)
+    eshipsd                                  0x20000244   Data          48  maingame.o(.bss)
+    bunkers                                  0x20000274   Data          36  maingame.o(.bss)
+    ebullets                                 0x20000298   Data          60  maingame.o(.bss)
+    pbullets                                 0x200002d4   Data          60  maingame.o(.bss)
+    __initial_sp                             0x20000710   Data           0  startup.o(STACK)
+
+
+
+==============================================================================
+
+Memory Map of the image
+
+  Image Entry point : 0x0000026d
+
+  Load Region LR_1 (Base: 0x00000000, Size: 0x00002dec, Max: 0xffffffff, ABSOLUTE)
+
+    Execution Region ER_RO (Base: 0x00000000, Size: 0x00002ddc, Max: 0xffffffff, ABSOLUTE)
+
+    Base Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x00000000   0x00000284   Code   RO           31  * RESET               startup.o
+    0x00000284   0x00000000   Code   RO           43  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
+    0x00000284   0x00000004   Code   RO           46    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
+    0x00000288   0x00000004   Code   RO           49    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
+    0x0000028c   0x00000000   Code   RO           51    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
+    0x0000028c   0x00000000   Code   RO           53    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
+    0x0000028c   0x00000008   Code   RO           54    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
+    0x00000294   0x00000000   Code   RO           56    .ARM.Collect$$$$0000000D  mc_w.l(entry10a.o)
+    0x00000294   0x00000000   Code   RO           58    .ARM.Collect$$$$0000000F  mc_w.l(entry11a.o)
+    0x00000294   0x00000004   Code   RO           47    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
+    0x00000298   0x00001960   Code   RO            1    .text               maingame.o
+    0x00001bf8   0x0000001c   Code   RO           32    .text               startup.o
+    0x00001c14   0x00000028   Code   RO           40    .text               random.o
+    0x00001c3c   0x00000024   Code   RO           60    .text               mc_w.l(init.o)
+    0x00001c60   0x0000000e   Code   RO           64    i.__scatterload_copy  mc_w.l(handlers.o)
+    0x00001c6e   0x00000002   Code   RO           65    i.__scatterload_null  mc_w.l(handlers.o)
+    0x00001c70   0x0000000e   Code   RO           66    i.__scatterload_zeroinit  mc_w.l(handlers.o)
+    0x00001c7e   0x0000113b   Data   RO            3    .constdata          maingame.o
+    0x00002db9   0x00000003   PAD
+    0x00002dbc   0x00000020   Data   RO           62    Region$$Table       anon$$obj.o
+
+
+    Execution Region ER_RW (Base: 0x20000000, Size: 0x00000010, Max: 0xffffffff, ABSOLUTE)
+
+    Base Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x20000000   0x0000000c   Data   RW            4    .data               maingame.o
+    0x2000000c   0x00000004   Data   RW           39    DATA                random.o
+
+
+    Execution Region ER_ZI (Base: 0x20000010, Size: 0x00000700, Max: 0xffffffff, ABSOLUTE)
+
+    Base Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x20000010   0x00000300   Zero   RW            2    .bss                maingame.o
+    0x20000310   0x00000400   Zero   RW           29    STACK               startup.o
+
+
+==============================================================================
+
+Image component sizes
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
+
+      6496        608       4411         12        768      15286   maingame.o
+        40         12          0          4          0        176   random.o
+       672        622          0          0       1024        916   startup.o
+
+    ----------------------------------------------------------------------
+      7208       1242       4446         16       1792      16378   Object Totals
+         0          0         32          0          0          0   (incl. Generated)
+         0          0          3          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Member Name
+
+         0          0          0          0          0          0   entry.o
+         0          0          0          0          0          0   entry10a.o
+         0          0          0          0          0          0   entry11a.o
+         8          4          0          0          0          0   entry2.o
+         4          0          0          0          0          0   entry5.o
+         0          0          0          0          0          0   entry7b.o
+         0          0          0          0          0          0   entry8b.o
+         8          4          0          0          0          0   entry9a.o
+        30          0          0          0          0          0   handlers.o
+        36          8          0          0          0         68   init.o
+
+    ----------------------------------------------------------------------
+        86         16          0          0          0         68   Library Totals
+         0          0          0          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Name
+
+        86         16          0          0          0         68   mc_w.l
+
+    ----------------------------------------------------------------------
+        86         16          0          0          0         68   Library Totals
+
+    ----------------------------------------------------------------------
+
+==============================================================================
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
+
+      7294       1258       4446         16       1792      16446   Grand Totals
+      7294       1258       4446         16       1792      16446   ELF Image Totals
+      7294       1258       4446         16          0          0   ROM Totals
+
+==============================================================================
+
+    Total RO  Size (Code + RO Data)                11740 (  11.46kB)
+    Total RW  Size (RW Data + ZI Data)              1808 (   1.77kB)
+    Total ROM Size (Code + RO Data + RW Data)      11756 (  11.48kB)
+
+==============================================================================
+
