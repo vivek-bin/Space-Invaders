@@ -1,5 +1,5 @@
 # Space-Invaders
-Space invaders is a retro archade game. This time implemented on the ARM Cortex M4 microcontroller.
+Space invaders is a retro arcade game. This time, implemented on the ARM Cortex M4 microcontroller.
 
 ### Required Hardware I/O connections-
 | Connection	| uC pins |
@@ -20,13 +20,16 @@ Space invaders is a retro archade game. This time implemented on the ARM Cortex 
 
 
 ### How to Run
-Connect pins as mentioned above.
-Open minorproject.uvproj with Keil UVision IDE. 
-Load the program into the microcontroller.
+
+1. Connect pins as mentioned above.
+2. Open minorproject.uvproj with Keil UVision IDE.
+3. Connect the microcontroller 'Launch Pad' to the computer via USB.
+4. Load the program into the microcontroller.
 
 
 ### Built With
-Built on the ARM Cortex based microcontroller .
-Keil uVision4 used as the IDE
+Built on the ARM Cortex M4 microcontroller, TM4C123GH6PM, with the Texas Instruments Tiva C series TM4C123G Launch Pad. 
+
+Keil uVision4 used as the IDE.
 
 
