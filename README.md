@@ -1,6 +1,8 @@
 # Space-Invaders
 Space invaders is a retro arcade game. This time, implemented on the ARM Cortex M4 microcontroller.
 
+A Nokia 5110 screen is used as the display, along with a sliding resistor to control the ship and a button to fire.
+
 ### Required Hardware I/O connections-
 | Connection	| uC pins |
 |-------------|---------|
@@ -22,9 +24,8 @@ Space invaders is a retro arcade game. This time, implemented on the ARM Cortex 
 ### How to Run
 
 1. Connect pins as mentioned above.
-2. Open minorproject.uvproj with Keil UVision IDE.
-3. Connect the microcontroller 'Launch Pad' to the computer via USB.
-4. Load the program into the microcontroller.
+2. Open 'minorproject.uvproj' with Keil UVision IDE.
+3. Load the program into the microcontroller by connecting the 'Launch Pad' to the computer via USB.
 
 
 ### Built With
