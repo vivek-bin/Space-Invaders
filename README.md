@@ -2,13 +2,14 @@
 
 Space invaders is one of the most famous arcade game, originally released in 1978. Space Invaders is a shooting game, with the objective being to survive the waves of alien ships.
 
-There are three rows of alien ships at the top of the screen. The player's ship is at the bottom, along with three bunkers for the player to hide behind, between the player and the alien ships.
+There are two rows of alien ships at the top of the screen. The player's ship is at the bottom, along with three bunkers for the player to hide behind, between the player and the alien ships.
 The player has to destroy the alien ships while avoiding their fire.
 
 The player is controlled using a slider, which moves the ship horizontally across the screen. The player fires by pressing the button.
 
 A Nokia 5110 screen is used as the display, along with a sliding resistor to control the ship and a button to fire.
 
+Video of gameplay : https://www.youtube.com/watch?v=Q_oTrg-d6Zc
 
 ### How to Run
 
